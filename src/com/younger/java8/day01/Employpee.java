@@ -17,6 +17,13 @@ public class Employpee {
         this.salary = salary;
     }
 
+    public Employpee(int id, String name, int age, double salary,Status status) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+        this.salary = salary;
+    }
+
     public int getId() {
         return id;
     }
@@ -50,16 +57,6 @@ public class Employpee {
     }
 
     @Override
-    public String toString() {
-        return "Employpee{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", age=" + age +
-                ", salary=" + salary +
-                '}';
-    }
-
-    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Employpee)) return false;
@@ -83,4 +80,21 @@ public class Employpee {
         result = 31 * result + (int) (temp ^ (temp >>> 32));
         return result;
     }
+
+    @Override
+    public String toString() {
+        return "Employpee{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                ", salary=" + salary +
+                '}';
+    }
+
+    public enum Status{
+        FREE,
+        BUSY,
+        VOCATION;
+    }
+
 }

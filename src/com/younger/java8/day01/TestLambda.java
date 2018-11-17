@@ -28,11 +28,11 @@ public class TestLambda {
     }
 
     List<Employpee> emps = Arrays.asList(
-            new Employpee(101, "张三", 18, 9999.99),
-            new Employpee(102, "李四", 59, 6666.66),
-            new Employpee(103, "王五", 28, 3333.33),
-            new Employpee(104, "赵六", 8, 7777.77),
-            new Employpee(105, "田七", 38, 5555.55)
+            new Employpee(101, "张三", 18, 9999.99, Employpee.Status.FREE),
+            new Employpee(102, "李四", 59, 6666.66, Employpee.Status.BUSY),
+            new Employpee(103, "王五", 28, 3333.33, Employpee.Status.FREE),
+            new Employpee(104, "赵六", 8, 7777.77, Employpee.Status.BUSY),
+            new Employpee(105, "田七", 38, 5555.55, Employpee.Status.VOCATION)
     );
 
     //需求：获取公司中年龄小于 35 的员工信息
